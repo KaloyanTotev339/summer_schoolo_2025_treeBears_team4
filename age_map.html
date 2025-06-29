@@ -1,0 +1,202 @@
+<!-- GeoChart generated in R 4.1.3 by googleVis 0.7.3 package -->
+<!-- Sat Jun 28 22:31:44 2025 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+
+
+// jsData 
+function gvisDataGeoChartID315840ed748d () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+"Austria",
+72.3250478
+],
+[
+"Germany",
+69.69770674
+],
+[
+"Sweden",
+73.23494487
+],
+[
+"Netherlands",
+70.79082947
+],
+[
+"Spain",
+73.53640207
+],
+[
+"Italy",
+70.61382488
+],
+[
+"France",
+71.00604351
+],
+[
+"Denmark",
+69.37067773
+],
+[
+"Greece",
+69.53590426
+],
+[
+"Switzerland",
+71.54116413
+],
+[
+"Belgium",
+69.98752495
+],
+[
+"Israel",
+73.17094017
+],
+[
+"Czech Republic",
+71.49484536
+],
+[
+"Poland",
+67.995671
+],
+[
+"Luxembourg",
+68.13612565
+],
+[
+"Hungary",
+70.22663252
+],
+[
+"Slovenia",
+70.94402239
+],
+[
+"Estonia",
+71.71103038
+],
+[
+"Croatia",
+68.27051926
+],
+[
+"Lithuania",
+68.32637439
+],
+[
+"Bulgaria",
+68.31863286
+],
+[
+"Cyprus",
+72.64312268
+],
+[
+"Finland",
+68.36941581
+],
+[
+"Latvia",
+68.22138365
+],
+[
+"Malta",
+68.54342432
+],
+[
+"Romania",
+66.97971919
+],
+[
+"Slovakia",
+63.32832833
+] 
+];
+data.addColumn('string','country_name');
+data.addColumn('number','Age');
+data.addRows(datajson);
+return(data);
+}
+
+
+// jsDrawChart
+function drawChartGeoChartID315840ed748d() {
+var data = gvisDataGeoChartID315840ed748d();
+var options = {};
+options["width"] = 556;
+options["height"] = 347;
+options["region"] = "150";
+options["colorAxis"] = {colors: ['#e7711c', '#4374e0']};
+
+
+    var chart = new google.visualization.GeoChart(
+    document.getElementById('GeoChartID315840ed748d')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+
+
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "geochart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartGeoChartID315840ed748d);
+})();
+function displayChartGeoChartID315840ed748d() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+
+
+// jsFooter
+</script>
+
+
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID315840ed748d"></script>
+
+
+<!-- divChart -->
+  
+<div id="GeoChartID315840ed748d" 
+  style="width: 556; height: 347;">
+</div>
+
